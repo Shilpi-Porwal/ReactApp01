@@ -1,22 +1,18 @@
 import React from 'react'
-import {
-  View,
-  Text,
-  SafeAreaView
-} from 'react-native'
+import { SafeAreaView, ScrollView, Text, View } from 'react-native'
+import FlatCards from './components/FlatCards'
 
-function App(){
-  return(
-<SafeAreaView>
-    <View>
-      <Text>Hello World</Text>
-         </View>
-  </SafeAreaView>
-  )
+const App = () => {
+
+    return (
+      <SafeAreaView>
+        <ScrollView>
+        <FlatCards></FlatCards>
+        </ScrollView>
+      </SafeAreaView>
+    )
   
 }
 
+export default App
 
-
-
-export default App;
