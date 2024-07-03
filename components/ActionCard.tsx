@@ -8,7 +8,7 @@ export default function ActionCard() {
     return (
     <View style={styles.headingText}>
       <Text>Blog Card</Text>
-      <View style={[styles.card,styles.elevatedCard]}></View>
+      <View style={[styles.card,styles.elevatedCard]}>
       <View style={styles.headingContainer}>
         <Text style={styles.headerText} >
             What's new in Javascript 21 - ES12
@@ -39,20 +39,63 @@ export default function ActionCard() {
        </TouchableOpacity>
       </View>
     </View>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
-    headingText:{},
-    card:{},
-    elevatedCard:{},
-    headingContainer:{},
-    headerText:{},
+    headingText:{
+      fontSize:24,
+      fontWeight:'bold',
+      paddingHorizontal:8
+    },
+    card:{
+      width:350,
+      height:360,
+       borderRadius:6,
+       marginVertical:12,
+       marginHorizontal:16
+    },
+    elevatedCard:{
+      backgroundColor:'#E07C24',
+      elevation:3,
+      shadowOffset:{
+        width:1,
+        height:1
+      },
+      shadowColor:'#333',
+      shadowOpacity:0.4
+    },
+    headingContainer:{
+      height:40,
+      flexDirection:'row',
+      justifyContent:'center'
+    },
+    headerText:{
+      color:'#000000',
+      fontSize:16,
+      fontWeight:'600'
+
+    },
     cardImage:{
         height:100
     },
-    bodyContainer:{},
-    footerContainer:{},
-    socialLinks:{}
+    bodyContainer:{
+     padding:10
+    },
+    footerContainer:{
+      padding:8,
+      flexDirection:'row',
+      alignItems:'center',
+      justifyContent:'space-evenly'
+    },
+    socialLinks:{
+      fontSize:14,
+      color:'#000',
+      backgroundColor:'#fff',
+      paddingHorizontal:20,
+      paddingVertical:6,
+      borderRadius:6
+    }
 
 })
